@@ -1,0 +1,12 @@
+{% extends 'ank/base.html'%}
+
+{%block head%}
+<h1 id="heading">Witamy na naszej stronie</h1>
+<ul>
+    {% for ankieta in Ankiety %}
+    <li>{{ankieta.question}} {{ankieta.pubdate}}</li>
+        
+      {%endfor%}
+</ul>
+{%endblock head%}
+
