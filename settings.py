@@ -86,6 +86,8 @@ STATICFILES_FINDERS = (
 SECRET_KEY = '@2aukn4we(-3077(dx(woh#rai2zvz-2_+zbd+qwpp1y)uvez='
 
 # List of callables that know how to import templates from various sources.
+# Uncomment the next two lines to enable the admin:
+# Uncomment the next two lines to enable the admin:
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
@@ -103,9 +105,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'ankiety.urls'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/home/art/Desktop/projects/ankiety/templates'
 )
 
 INSTALLED_APPS = (
@@ -117,6 +118,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    'ankiety.ank',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
