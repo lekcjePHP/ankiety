@@ -1,0 +1,13 @@
+<!--detail.html-->
+{% extends "ank/base.html" %}
+{% block head %}
+<b>pojedyncza ankieta</b></br>
+{{Ankieta}}  {{Ankieta.pubdate }}
+<ul>
+{% for odpowiedz in Ankieta.choice_set.all %}
+<li>{{odpowiedz.choice}} {{odpowiedz.votes}}</li>
+{% endfor %}
+</ul>
+<a href='http://localhost:8000'>Strona glowna</a>
+{% endblock head%}
+
