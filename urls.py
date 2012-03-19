@@ -12,5 +12,4 @@ urlpatterns = patterns('',
 
     url(r'^$', 'ankiety.ank.views.index'),
     url(r'^detail/(?P<poll_id>\d+)/$', 'ankiety.ank.views.detail'),
-
 )

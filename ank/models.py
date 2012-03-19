@@ -1,3 +1,4 @@
+#models.py
 from django.db import models
 
 # Create your models here.
@@ -15,7 +16,7 @@ class Choice (models.Model):
     votes = models.IntegerField();
 
     def __unicode__(self):
-        return self.choic
+        return self.choice
 
 
 
