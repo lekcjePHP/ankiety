@@ -13,3 +13,13 @@ def index(request):
 def detail(request, poll_id):
     ankieta = get_object_or_404(Poll, pk=poll_id)
     return render_to_response('ank/detail.html', {'Ankieta':ankieta}) 
+
+def showAll(request):
+    allAnkiety = Poll.objects.all().order_by('-pubdate')
+
+    return render_to_response('ank/all.html', {'Ankiety':allAnkiety})
+            
+def vote(request, choice_id):
+    choice = get_object_or_404(Poll, pk=choice_id)
+    choice.vote+=1
+    return HttpResponse('sukces')

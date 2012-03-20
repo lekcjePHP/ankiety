@@ -6,8 +6,10 @@
 <ul>
     {% for ankieta in Ankiety %}
     <li><a href="http://localhost:8000/detail/{{ankieta.id}}/">{{ankieta.question}} {{ankieta.pubdate}}</a></li>
-      {%endfor%}
+    {%endfor%}
 </ul>
+
+<a href="http://localhost:8000/all">WSZYSTKIE ANKIETY</a>
 {%endblock head%}
 
 

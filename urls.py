@@ -12,4 +12,8 @@ urlpatterns = patterns('',
 
     url(r'^$', 'ankiety.ank.views.index'),
     url(r'^detail/(?P<poll_id>\d+)/$', 'ankiety.ank.views.detail'),
+    url(r'^all/$', 'ankiety.ank.views.showAll'),
+    url(r'^glosuj/(?P<choice_id>\d+)/$', 'ankiety.ank.views.vote'),
+
 )
+
