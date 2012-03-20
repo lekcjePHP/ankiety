@@ -5,9 +5,11 @@
 {{Ankieta}}  {{Ankieta.pubdate }}
 <ul>
 {% for odpowiedz in Ankieta.choice_set.all %}
-<li>{{odpowiedz.choice}} {{odpowiedz.votes}}</li>
-{% endfor %}
+<li><a href='http://localhost:8000/glosuj/{{ odpowiedz.id }}'>{{ odpowiedz.choice }}</a>{{ odpowiedz.votes }}</li>
+
+{% endfor %} 
 </ul>
+
 <a href='http://localhost:8000'>Strona glowna</a>
 {% endblock head%}
 
