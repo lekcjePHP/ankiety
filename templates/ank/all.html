@@ -1,0 +1,15 @@
+<!--all.html-->
+{% extends 'ank/base.html' %}
+{% block head %}
+<h1> wszystkie ankiety w serwisie</h1>
+<ul>
+    {% for ankieta in Ankiety %}
+    <li><a href='http://localhost:8000/detail/{{ankieta.id}}/'>{{ankieta.question}}-{{ankieta.pubdate}}</a></li>
+    {% endfor %}
+
+</ul>
+
+
+<a href='http://localhost:8000'>Strona glowna</a>
+
+{% endblock head %}
